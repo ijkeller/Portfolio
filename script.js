@@ -2,7 +2,7 @@
 //     console.log('oops! I still have to link my jQuery properly!');
 //   } else {console.log('I did it! I linked jQuery and this js file properly!')};
 
-
+// Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler
 
 $( "#hamburger").on("click", function() {
   console.log("hamburger click");
