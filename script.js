@@ -10,22 +10,22 @@ $( "#hamburger").on("click", function() {
 })
 
 
-const mediaQuery = window.matchMedia("(min-width: 768px)")
+const mediaQuery = window.matchMedia("(min-width: 768px)");
 
 const $projectsExtend = function() {
   if (mediaQuery.matches) {
     // Then trigger an alert
   console.log("(min-width: 768px) + 'project' clicked");
-  $(".skills-list-media").css("display: none;");
-  $(".projects_images_media").css("display: inline-block;");
+  $("#skills-list-media").toggleClass("skills_display");
+  $("#projects_images_media").toggleClass("projects_display");
 }}
 
 const $skillsExtend = function() {
   if (mediaQuery.matches) {
   // Then trigger an alert
   console.log("(min-width: 768px) + 'skills' clicked");
-  $(".projects_images_media").css("display: none;");
-  $(".skills-list-media").css("display: flex;");
+  $("#projects_images_media").toggleClass("projects_display");
+  $("#skills-list-media").toggleClass("skills_display");
 }}
 
 $("#skillsTitle").on("click", $skillsExtend);
