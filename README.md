@@ -143,13 +143,13 @@ I'd like to make a one page website that the user doesn't have to move from.  Th
 
 | Component          | Priority | Estimated Time | Actual Time |
 | ------------------ | -------- | ---------------| ----------- |
-| Html -writing divs |     H    |        2hrs    |             |
-| header             |     H    |        30 min  |             |
-| Hamburger menu     |     H    |        1 hr    |             |
-| links              |     H    |        1 hr    |             |
-| Grid layout        |     H    |        1 hr    |             |
-| jquery popouts     |     M    |        2 hrs   |             |
-| Basic css          |     H    |        1 hr    |             |
+| Html -writing divs |     H    |        2hrs    | pretty close|
+| header             |     H    |        30 min  | ended up working on the grid much longer|
+| Hamburger menu     |     H    |        1 hr    | roughly 2 hrs to finally complete|
+| links              |     H    |        1 hr    | closer, roughly 1-2 hrs|
+| Grid layout        |     H    |        1 hr    | much longer, bugs ended up costing a lot of time.  I learned quite a bit, it should be quicker next time. |
+| jquery popouts     |     M    |        2 hrs   | much longer, getting the popouts done was tricky|
+| Basic css          |     H    |        1 hr    | spend more time on this early than necessary,  |
 |                    |          |                |             |
 |                    |          |                |             |
 
@@ -163,9 +163,7 @@ I'd like to make a one page website that the user doesn't have to move from.  Th
 |additional css   |    L     |       2 hrs    |             |
 |                 |          |                |             |
 |                 |          |                |             |
-|                 |          |                |             |
-|                 |          |                |             |
-|                 |          |                |             |
+
 
 
 
@@ -175,7 +173,7 @@ I'd like to make a one page website that the user doesn't have to move from.  Th
 ### Additional Libraries
 ---------------------
 
-
+No additional libraries currently.
 
 
 
@@ -186,15 +184,78 @@ I'd like to make a one page website that the user doesn't have to move from.  Th
 ### Code Snippet
 --------------------- 
 
+There isn't anything specific that I'm actually proud of.  Most of the code ended up being pretty simple after I was able to solve all of the different issues.
+
+Example:
+
+Popout js
+
+    const $projectsExtend = function() {
+    console.log("'project' clicked");
+    $("#projects_images_media").toggleClass("projects_hide");
+    };
+
+    const $skillsExtend = function() {
+    console.log("'skills' clicked");
+    $("#skills-list-media").toggleClass("skills_hide");
+    };
 
 
+    $("#projectsTitle").on("click", $projectsExtend);
+
+    $("#skillsTitle").on("click", $skillsExtend);
+
+Popout html and css
+
+    //html
+
+    <div class="projects_images projects_hide" id="projects_images_media">
+
+    <div class="skills-list skills_hide" id="skills-list-media" >
+
+
+    /*css*/
+
+    .projects_images {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        display: inline-block;
+        justify-self: center;
+        overflow-x: scroll;
+        overflow-y: hide;
+        height: 100%;
+        width: 95%;
+        padding-top: 16px;
+    }
+
+    .projects_hide {
+        display: none;
+    }
+
+    .skills-list{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-evenly;
+    white-space: normal;
+    overflow-x: scroll;
+    }
+
+    .skills_hide{
+        display: none;
+    }
+
+Adding a new class('_hide') that targetted the css within the media querry was part of the solution, but for some reason when I added a class that targetted the .skills-list and .projects_images, even when the classes were new ones that exclusively targetted the classes below the media query, it wouldn't work.  It was likely a mistake I didn't catch, but nothing worked for me until I added an additional class that allowed me to simply turn off the 'display: none;.'
 
 
 
 ### Issues and Resolutions
 ---------------------
 
-
+* grid issues
+* issues with the popouts
+* issues with the scroll bars
+* 
 
 
 
