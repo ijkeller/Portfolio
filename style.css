@@ -204,7 +204,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     white-space: normal;
-    overflow-x: scroll;
+    overflow-x: hide;
+    padding: 5px;
 }
 
 img {
@@ -304,6 +305,10 @@ h3 {
 .dark-slate {
     color: hsl(220, 21%, 36%); 
 }
+
+
+
+
 
 
 

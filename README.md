@@ -106,7 +106,7 @@ I'd like to make a one page website that the user doesn't have to move from.  Th
 
 
 
-### MVP/PostMVP
+### Minimum Viable Product (MVP)/Post-MVP
 ---------------------
 
 
