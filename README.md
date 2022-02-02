@@ -255,7 +255,7 @@ Adding a new class('_hide') that targetted the css within the media querry was p
 * grid issues
 * issues with the popouts
 * issues with the scroll bars
-* 
+* repo was initially pushed to another enterprise github account.  Original commits are located there [Github Enterprise, General Assembly, Isaiah Keller, w3-project1](https://git.generalassemb.ly/isaiah/w3-project1)
 
 
 
