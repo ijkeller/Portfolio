@@ -1,5 +1,5 @@
 
-/* COLOR SCHEME STOLEN FROM https://brittanychiang.com/ */
+/* COLOR SCHEME TAKEN FROM https://brittanychiang.com/ */
 
 
 * {
@@ -21,8 +21,8 @@ a:visited {
 }
 
 /* mouse over link */
-a:hover {
-    
+.focus:hover {
+    transform: scale(1.05);
 }
 
 /* selected link */
@@ -444,10 +444,11 @@ h1 {
     justify-content: space-evenly;
     overflow-x: scroll;
     height: 75%;
+    transition: transform .2s ease-in-out;
 }
 
 .skills_hide{
-    display: none;
+    transform: translate3d(-115%, 0px, 0px);
 }
 
 .projects {
@@ -477,10 +478,11 @@ h1 {
     height: 75%;
     width: 95%;
     padding-top: 16px;
+    transition: transform .2s ease-in-out;
 }
 
 .projects_hide {
-    display: none;
+    transform: translate3d(115%, 0px, 0px);
 }
 
 .projects img {
